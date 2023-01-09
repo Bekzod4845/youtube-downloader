@@ -1,0 +1,8 @@
+TOKEN = "5632112752:AAEqQimkrm_46s3VB5fbf-YO9F-78CE0qBs"
+
+CHANNELS = [
+    ["KANAL 1", "-1001838481354", "https://t.me/kanal02s"],
+    ["KANAL 2", "-1001884163228", "https://t.me/ravshanw"]
+]
+
+NOT_SUB_MESSAGE = "BOT ISHLESHI UCHUN KANALGA OBUNA BOLING!"
