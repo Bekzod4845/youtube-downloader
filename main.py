@@ -1,5 +1,4 @@
 import os
-
 from aiogram import *
 from config import *
 from pytube import YouTube
@@ -28,7 +27,7 @@ async def bot_message(message: types.Message):
 
 async def download_youtube_video(url, message, bot):
     yt = YouTube(url)
-    stream = yt.streams.filter(progressive=False, file_extension="mp4", res="720p")
+    stream = yt.streams.filter(progressive=True, file_extension="mp4")
     stream.get_highest_resolution().download(f'{message.chat.id}', f'{message.chat.id}_{yt.title}')
     with open(f"{message.chat.id}/{message.chat.id}_{yt.title}", 'rb') as video:
         await bot.send_video(message.chat.id, video, caption="*BU VIDEO*", parse_mode="Markdown")
